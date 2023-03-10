@@ -1,5 +1,6 @@
 -- customize mason plugins
 return {
+  -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
     -- overrides `require("mason-lspconfig").setup(...)`
@@ -32,15 +33,6 @@ return {
     opts = {
       -- ensure_installed = { "python" },
       ensure_installed = { "go" },
-    },
-  },
-  {
-    "simrat39/rust-tools.nvim",
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = { "rust_analyzer" },
-      },
     },
   },
 }
