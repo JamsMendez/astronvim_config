@@ -103,11 +103,7 @@ return {
   },
   {
     "simrat39/rust-tools.nvim",
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = { "rust_analyzer" },
-      },
-    },
+    event = "User AstroLspSetup",
+    opts = function() return { server = require("astronvim.utils.lsp").config "rust_analyzer" } end,
   },
 }
