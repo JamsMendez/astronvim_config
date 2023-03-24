@@ -7,14 +7,15 @@ return {
     opts = {
       -- ensure_installed = { "lua_ls" },
       ensure_installed = {
-        "lua_ls",
+    	"lua_ls",
         "tsserver",
         "gopls",
         "rust_analyzer",
+        "golangci_lint_ls",
         "denols",
         "eslint",
         "dockerls",
-        "golangci_lint_ls",
+        "cssls",
       },
     },
   },

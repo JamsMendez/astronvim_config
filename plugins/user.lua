@@ -56,6 +56,7 @@ return {
       }
     end,
   },
+  { "lvimuser/lsp-inlayhints.nvim", config = true },
   -- { "fatih/vim-go" },
   { "ray-x/guihua.lua" },
   {
@@ -103,7 +104,11 @@ return {
   },
   {
     "simrat39/rust-tools.nvim",
-    event = "User AstroLspSetup",
-    opts = function() return { server = require("astronvim.utils.lsp").config "rust_analyzer" } end,
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = {
+        ensure_installed = { "rust_analyzer" },
+      },
+    },
   },
 }
