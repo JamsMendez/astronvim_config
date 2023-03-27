@@ -56,7 +56,7 @@ return {
       }
     end,
   },
-  { "lvimuser/lsp-inlayhints.nvim", config = true },
+  -- { "lvimuser/lsp-inlayhints.nvim", config = true },
   -- { "fatih/vim-go" },
   { "ray-x/guihua.lua" },
   {

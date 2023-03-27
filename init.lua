@@ -1,16 +1,16 @@
 return {
   -- Configure AstroNvim updates
   updater = {
-    remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
-    version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
-    branch = "main", -- branch name (NIGHTLY ONLY)
-    commit = nil, -- commit hash (NIGHTLY ONLY)
-    pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
-    skip_prompts = false, -- skip prompts about breaking changes
+    remote = "origin",     -- remote to use
+    channel = "stable",    -- "stable" or "nightly"
+    version = "latest",    -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
+    branch = "main",       -- branch name (NIGHTLY ONLY)
+    commit = nil,          -- commit hash (NIGHTLY ONLY)
+    pin_plugins = nil,     -- nil, true, false (nil will pin plugins on stable only)
+    skip_prompts = false,  -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
-    auto_quit = false, -- automatically quit the current session after a successful update
-    remotes = { -- easily add new remotes to track
+    auto_quit = false,     -- automatically quit the current session after a successful update
+    remotes = {            -- easily add new remotes to track
       --   ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url
       --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
@@ -31,7 +31,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = false, -- enable or disable format on save globally
+        enabled = false,    -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -51,27 +51,27 @@ return {
     servers = {
       -- "pyright"
     },
-    on_attach = function(client, bufnr)
-      if client.server_capabilities.inlayHintProvider then
-        local inlayhints_avail, inlayhints = pcall(require, "lsp-inlayhints")
-        if inlayhints_avail then inlayhints.on_attach(client, bufnr) end
-      end
-      require("lsp-inlayhints").toggle()
+    -- on_attach = function(client, bufnr)
+    --   if client.server_capabilities.inlayHintProvider then
+    --     local inlayhints_avail, inlayhints = pcall(require, "lsp-inlayhints")
+    --     if inlayhints_avail then inlayhints.on_attach(client, bufnr) end
+    --   end
+    --   require("lsp-inlayhints").toggle()
 
-      -- -- fix denols vs tsserver
-      -- local active_clients = vim.lsp.get_active_clients()
-      -- if client.name == "denols" then
-      --   for _, client_ in pairs(active_clients) do
-      --     -- stop tsserver if denols is already active
-      --     if client_.name == "tsserver" then client_.stop() end
-      --   end
-      -- elseif client.name == "tsserver" then
-      --   for _, client_ in pairs(active_clients) do
-      --     -- prevent tsserver from starting if denols is already active
-      --     if client_.name == "denols" then client.stop() end
-      --   end
-      -- end
-    end,
+    -- -- fix denols vs tsserver
+    -- local active_clients = vim.lsp.get_active_clients()
+    -- if client.name == "denols" then
+    --   for _, client_ in pairs(active_clients) do
+    --     -- stop tsserver if denols is already active
+    --     if client_.name == "tsserver" then client_.stop() end
+    --   end
+    -- elseif client.name == "tsserver" then
+    --   for _, client_ in pairs(active_clients) do
+    --     -- prevent tsserver from starting if denols is already active
+    --     if client_.name == "denols" then client.stop() end
+    --   end
+    -- end
+    -- end,
     setup_handlers = {
       -- add custom handler
       rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
