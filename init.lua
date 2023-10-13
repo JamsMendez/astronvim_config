@@ -18,6 +18,9 @@ return {
   },
   -- Set colorscheme to use
   colorscheme = "tokyonight",
+  -- colorscheme = "astrodark",
+  -- colorscheme = "darcula-dark",
+
   icons = {
     VimIcon = "",
   },
@@ -82,7 +85,7 @@ return {
         return opts
       end,
       eslint = function(opts)
-        opts.root_dir = require("lspconfig.util").root_pattern("package.json", ".eslintrc.json", ".eslintrc.js")
+        opts.root_dir = require("lspconfig.util").root_pattern(".eslintrc.json", ".eslintrc.js", ".eslintrc.cjs")
         return opts
       end,
       tsserver = function(opts)

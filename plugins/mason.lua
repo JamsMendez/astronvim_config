@@ -7,7 +7,7 @@ return {
     opts = {
       -- ensure_installed = { "lua_ls" },
       ensure_installed = {
-    	"lua_ls",
+        "lua_ls",
         "tsserver",
         "gopls",
         "rust_analyzer",
@@ -32,8 +32,46 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      -- ensure_installed = { "python" },
-      ensure_installed = { "go" },
+      ensure_installed = { "delve" },
+      -- handlers = {
+      --   delve = function(source_name)
+      --     local dap = require "dap"
+      --     dap.adapters.delve = {
+      --       type = "executable",
+      --       command = "dlv",
+      --       args = { "dap", "-l", "127.0.0.1:38697" },
+      --     }
+      --     -- Configuración de la sesión de depuración (debug session) para Golang
+      --     dap.configurations.delve = {
+      --       {
+      --         type = "go",
+      --         name = "Debug",
+      --         request = "launch",
+      --         program = "${file}",
+      --       },
+      --       {
+      --         type = "go",
+      --         name = "Debug attach",
+      --         request = "launch",
+      --         program = "${file}",
+      --       },
+      --       {
+      --         type = "go",
+      --         name = "Debug test",
+      --         request = "launch",
+      --         mode = "test",
+      --         program = "${file}",
+      --       },
+      --       {
+      --         type = "go",
+      --         name = "Debug test (go.mod)",
+      --         request = "launch",
+      --         mode = "test",
+      --         program = "./${relativeFileDirname}",
+      --       },
+      --     }
+      --   end,
+      -- },
     },
   },
 }

@@ -18,6 +18,8 @@ return {
           "--jsx-single-quote",
           "--use-tabs",
           "--tab-width 4",
+          "--html-whitespace-sensitivity css",
+          "--embedded-language-formatting=auto"
         },
       },
       null_ls.builtins.formatting.stylua,
