@@ -19,7 +19,7 @@ return {
           "--use-tabs",
           "--tab-width 4",
           "--html-whitespace-sensitivity css",
-          "--embedded-language-formatting=auto"
+          "--embedded-language-formatting=auto",
         },
       },
       null_ls.builtins.formatting.stylua,

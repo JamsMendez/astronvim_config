@@ -89,12 +89,12 @@ return {
       return opts
     end,
   },
-  --   {
-  --     "xiantang/darcula-dark.nvim",
-  --     dependencies = {
-  --       "nvim-treesitter/nvim-treesitter",
-  --     },
-  --   },
+  {
+    "xiantang/darcula-dark.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
   {
     "folke/tokyonight.nvim",
     config = function()
