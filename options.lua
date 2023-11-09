@@ -1,6 +1,4 @@
-local alpha = function()
-  return string.format("%x", math.floor(255 * 0.95))
-end
+local alpha = function() return string.format("%x", math.floor(255 * 0.95)) end
 
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {

@@ -133,6 +133,7 @@ return {
               parameterNames = true,
               rangeVariableTypes = true,
             },
+            gofumpt = true,
           },
         }
         return opts
