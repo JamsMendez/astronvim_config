@@ -100,7 +100,7 @@ return {
     end,
   },
   {
-    "xiantang/darcula-dark.nvim",
+    "jamsmendez/darcula-dark.nvim",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
@@ -115,8 +115,71 @@ return {
           sidebars = "transparent",
           floats = "transparent",
         },
-        -- on_colors = function (colors)
-        -- end
+        on_highlights = function(highlights, colors)
+          -- highlights.String = {
+          --   fg = "#6aab73",
+          -- }
+          --
+          -- highlights.Constant = {
+          --   fg = colors.purple,
+          -- }
+          --
+          -- highlights.Function = {
+          --   fg = "#56a8f5",
+          -- }
+          --
+          -- highlights["@keyword"] = {
+          --   fg = colors.orange,
+          -- }
+          --
+          -- highlights["@keyword.function"] = {
+          --   fg = colors.orange,
+          -- }
+          --
+          -- highlights["@method"] = {
+          --   fg = "#af9c73",
+          -- }
+          --
+          -- highlights["@namespace"] = {
+          --   fg = "#afbf7e",
+          -- }
+          --
+          -- highlights["@constant.builtin"] = {
+          --   fg = colors.orange,
+          -- }
+          --
+          -- highlights["@property"] = {
+          --   fg = colors.purple,
+          -- }
+          --
+          -- highlights["@type.builtin"] = {
+          --   fg = "#f18048",
+          -- }
+          --
+          -- highlights.Type = {
+          --   fg = colors.green2,
+          -- }
+          --
+          -- highlights.Number = {
+          --   fg = colors.green2,
+          -- }
+          --
+          -- highlights["@field"] = {
+          --   fg = colors.fg,
+          -- }
+          --
+          -- highlights.Special = {
+          --   fg = "#56a8f5",
+          -- }
+          --
+          -- highlights.Statement = {
+          --   fg = colors.orange,
+          -- }
+          --
+          -- highlights["@parameter"] = {
+          --   fg = colors.fg,
+          -- }
+        end,
       }
     end,
   },

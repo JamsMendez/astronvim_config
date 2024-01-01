@@ -17,9 +17,9 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "tokyonight",
+  -- colorscheme = "tokyonight",
   -- colorscheme = "astrodark",
-  -- colorscheme = "darcula-dark",
+  colorscheme = "darcula-dark",
 
   icons = {
     VimIcon = "",
@@ -120,6 +120,7 @@ return {
       gopls = function(opts)
         opts.settings = {
           gopls = {
+            semanticTokens = true,
             analyses = {
               unusedparams = true,
             },
