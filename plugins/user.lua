@@ -1,5 +1,16 @@
 return {
   {
+    "nvim-web-devicons",
+    opts = {
+      override = {
+        go = {
+          icon = "󰟓",
+          color = "#00ADD8",
+        },
+      },
+    },
+  },
+  {
     "neo-tree.nvim",
     opts = {
       filesystem = {
